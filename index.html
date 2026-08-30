@@ -1,1 +1,1020 @@
-Create INVESTORA-PLATFORM homepage
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #0a2342;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            height: 65px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #0a2342;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #008f55;
+        }
+
+        .nav-button {
+            background: #008f55;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 6px;
+        }
+
+        .nav-button:hover {
+            background: #006f43;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.96),
+                    rgba(255,255,255,0.96)
+                );
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero-logo {
+            width: min(650px, 90%);
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #062b59;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #008f55;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #36546f;
+            max-width: 750px;
+            margin: 0 auto 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #008f55;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #006f43;
+        }
+
+        .btn-secondary {
+            border: 2px solid #0a2342;
+            color: #0a2342;
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0a2342;
+            color: white;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #062b59;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #60758a;
+            font-size: 18px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #f7faf9;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            color: #062b59;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #52687a;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+            border-top: 5px solid #008f55;
+        }
+
+        .about-card h3 {
+            color: #062b59;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 35px 25px;
+            border-radius: 12px;
+            background: white;
+            border: 1px solid #e5e9ed;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #e8f7f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .service-card h3 {
+            color: #062b59;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #637587;
+        }
+
+        /* =========================
+           OPPORTUNITIES
+        ========================= */
+
+        .opportunities {
+            background: #f7faf9;
+        }
+
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .opportunity-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .opportunity-top {
+            height: 120px;
+            background: linear-gradient(135deg, #062b59, #008f55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .opportunity-content {
+            padding: 25px;
+        }
+
+        .opportunity-content h3 {
+            color: #062b59;
+            margin-bottom: 10px;
+        }
+
+        .opportunity-content p {
+            color: #657789;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           HOW IT WORKS
+        ========================= */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: #008f55;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            color: #062b59;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #68798a;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: linear-gradient(135deg, #062b59, #008f55);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .cta .btn {
+            background: #ffffff;
+            color: #062b59;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #061b31;
+            color: white;
+            padding: 55px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 250px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 18px;
+            color: #ffffff;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #c7d3dd;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+            color: #aebdca;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .opportunity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 10px 15px;
+            }
+
+            .nav-logo {
+                height: 48px;
+            }
+
+            .nav-links a:not(.nav-button) {
+                display: none;
+            }
+
+            .hero {
+                min-height: 600px;
+                padding: 50px 15px;
+            }
+
+            .hero-logo {
+                width: 95%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+    <nav>
+
+        <a href="#home">
+            <img
+                src="assets/images/investora-logo.png"
+                alt="INVESTORA PLATFORM"
+                class="nav-logo">
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#opportunities">Opportunities</a>
+            <a href="#contact" class="nav-button">Get Started</a>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <img
+            src="assets/images/investora-logo.png"
+            alt="INVESTORA PLATFORM - Where Capital Meets Opportunity"
+            class="hero-logo">
+
+        <h1>
+            Where <span>Capital</span> Meets Opportunity
+        </h1>
+
+        <p>
+            Connecting investors with verified investment opportunities
+            and facilitating quality investment deals across Africa.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#opportunities" class="btn btn-primary">
+                Explore Opportunities
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+                Become an Investor
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About INVESTORA</h2>
+
+            <p>
+                Building trusted connections between capital and opportunity.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <h3>
+                    Investment Matching & Deal Facilitation
+                </h3>
+
+                <p>
+                    INVESTORA PLATFORM is an investment matching and
+                    deal facilitation platform designed to connect
+                    investors with credible and carefully evaluated
+                    investment opportunities.
+                </p>
+
+                <p>
+                    Our platform is designed to make it easier for
+                    investors to discover opportunities while helping
+                    businesses and projects connect with suitable capital.
+                </p>
+
+                <p>
+                    We focus on transparency, opportunity discovery,
+                    professional networking and structured deal facilitation.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    To become a trusted investment ecosystem connecting
+                    capital with high-potential opportunities across
+                    Africa and beyond.
+                </p>
+
+                <br>
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To simplify investment discovery and create trusted
+                    connections between investors, entrepreneurs,
+                    businesses and investment projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Services</h2>
+
+            <p>
+                Solutions designed to connect capital with opportunity.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💰
+                </div>
+
+                <h3>Investor Matching</h3>
+
+                <p>
+                    Connect investors with investment opportunities
+                    aligned with their interests and investment objectives.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🤝
+                </div>
+
+                <h3>Deal Facilitation</h3>
+
+                <p>
+                    Support professional connections between investors,
+                    entrepreneurs and project owners.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📊
+                </div>
+
+                <h3>Opportunity Discovery</h3>
+
+                <p>
+                    Discover businesses and projects seeking capital
+                    across different sectors and markets.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INVESTMENT OPPORTUNITIES
+========================= -->
+
+<section class="opportunities" id="opportunities">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Investment Opportunities</h2>
+
+            <p>
+                Discover potential opportunities across key sectors.
+            </p>
+
+        </div>
+
+
+        <div class="opportunity-grid">
+
+            <div class="opportunity-card">
+
+                <div class="opportunity-top">
+                    AGRIBUSINESS
+                </div>
+
+                <div class="opportunity-content">
+
+                    <h3>Agriculture & Agribusiness</h3>
+
+                    <p>
+                        Investment opportunities in agriculture,
+                        food processing and agribusiness value chains.
+                    </p>
+
+                    <a href="#contact" class="btn btn-primary">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="opportunity-card">
+
+                <div class="opportunity-top">
+                    MINING
+                </div>
+
+                <div class="opportunity-content">
+
+                    <h3>Mining & Natural Resources</h3>
+
+                    <p>
+                        Explore opportunities within responsible
+                        mining and natural resource development.
+                    </p>
+
+                    <a href="#contact" class="btn btn-primary">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="opportunity-card">
+
+                <div class="opportunity-top">
+                    REAL ESTATE
+                </div>
+
+                <div class="opportunity-content">
+
+                    <h3>Real Estate & Infrastructure</h3>
+
+                    <p>
+                        Connect with projects involving property,
+                        infrastructure and development.
+                    </p>
+
+                    <a href="#contact" class="btn btn-primary">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>How INVESTORA Works</h2>
+
+            <p>
+                A simple pathway from opportunity discovery to connection.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>Register</h3>
+
+                <p>
+                    Create your INVESTORA profile.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>Discover</h3>
+
+                <p>
+                    Explore suitable investment opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>Connect</h3>
+
+                <p>
+                    Connect with relevant investors or project owners.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>Facilitate</h3>
+
+                <p>
+                    Move qualified opportunities toward structured deals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta" id="contact">
+
+    <div class="container">
+
+        <h2>
+            Ready to Explore Opportunity?
+        </h2>
+
+        <p>
+            Join INVESTORA PLATFORM and connect capital with opportunity.
+        </p>
+
+        <a href="mailto:info@investora-platform.com"
+           class="btn">
+            Contact INVESTORA
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div class="footer-column">
+
+            <img
+                src="assets/images/investora-logo.png"
+                alt="INVESTORA PLATFORM"
+                class="footer-logo">
+
+            <p>
+                INVESTORA PLATFORM — Where Capital Meets Opportunity.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Platform</h3>
+
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#opportunities">Opportunities</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Invest</h3>
+
+            <a href="#opportunities">Find Opportunities</a>
+            <a href="#contact">Become an Investor</a>
+            <a href="#contact">Submit a Project</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <a href="mailto:info@investora-platform.com">
+                Email Us
+            </a>
+
+            <a href="#contact">
+                Contact INVESTORA
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 INVESTORA PLATFORM. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
